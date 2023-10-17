@@ -8,7 +8,6 @@ import {
     faLanguage,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faMessage,
     faUser,
     faCoins,
@@ -22,11 +21,13 @@ import AccountItems from '~/components/AccountItems';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import Image from '~/components/Image';
 
 import styles from './Header.module.scss';
 import image from '~/assets/images';
 
 import { useEffect, useState } from 'react';
+import { UploadIcon } from '~/components/Icons';
 
 const currentUser = true;
 const cx = classNames.bind(styles);
@@ -137,12 +138,12 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
-                            <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Message" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <FontAwesomeIcon icon={faMessage} />
                                 </button>
@@ -156,9 +157,10 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                // src=""
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/6e8887eb21fb9f2e841bbaf4797de459~c5_300x300.webp?x-expires=1697702400&amp;x-signature=okwq0r8BspOji4tCXjDY%2FibXN1w%3D"
                             />
                         ) : (
