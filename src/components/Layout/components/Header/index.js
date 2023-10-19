@@ -16,11 +16,13 @@ import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import 'tippy.js/dist/tippy.css';
 import Search from '../Search';
+import routesConfig from '~/config/routes';
 
 import styles from './Header.module.scss';
 import image from '~/assets/images';
 
 import { UploadIcon, NotificationIcon, MessageIcon } from '~/components/Icons';
+import { Link } from 'react-router-dom';
 
 const currentUser = true;
 const cx = classNames.bind(styles);
@@ -89,9 +91,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <img src={image.logo} alt="Tiktok" />
-                </div>
+                </Link>
 
                 <Search />
 
