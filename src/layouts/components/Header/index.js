@@ -16,7 +16,7 @@ import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import 'tippy.js/dist/tippy.css';
 import Search from '../Search';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 import styles from './Header.module.scss';
 import image from '~/assets/images';
@@ -91,7 +91,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={image.logo} alt="Tiktok" />
                 </Link>
 
