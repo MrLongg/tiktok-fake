@@ -24,7 +24,7 @@ import image from '~/assets/images';
 import { UploadIcon, NotificationIcon, MessageIcon } from '~/components/Icons';
 import { Link } from 'react-router-dom';
 
-const currentUser = true;
+const currentUser = false;
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {

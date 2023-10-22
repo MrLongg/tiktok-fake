@@ -33,6 +33,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
             );
         });
     };
+
     return (
         <Tippy
             interactive
