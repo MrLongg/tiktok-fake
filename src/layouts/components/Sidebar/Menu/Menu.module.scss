@@ -20,13 +20,14 @@
         }
 
         .active-icon {
-            display: flex;
+            display: block;
         }
     }
 }
 
 .title {
     margin-left: 10px;
+    padding-bottom: 6px;
 }
 
 .active-icon {

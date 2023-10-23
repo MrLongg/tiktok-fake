@@ -53,6 +53,7 @@ export const MessageIcon = ({ className, width = '2.5rem', height = '3.2rem' }) 
 
 export const HomeIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
     <svg
+        className={className}
         width={width}
         data-e2e=""
         height={height}
@@ -116,6 +117,7 @@ export const UserGroupIcon = ({ className, width = '3.2rem', height = '3.2rem' }
 
 export const UserGroupActiveIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
     <svg
+        className={className}
         width={width}
         data-e2e=""
         height={height}
@@ -151,6 +153,7 @@ export const LiveIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => 
 
 export const LiveActiveIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
     <svg
+        className={className}
         width={width}
         data-e2e=""
         height={height}
